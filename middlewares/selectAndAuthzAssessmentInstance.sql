@@ -1,6 +1,7 @@
 -- BLOCK select_and_auth
 SELECT
-    to_jsonb(ai) AS assessment_instance,
+    jsonb_set(to_jsonb(ai), '{formatted_date}',
+        to_jsonb(format_date_full_compact(ai.date, ci.display_timezone))) AS assessment_instance,
     CASE
         WHEN ai.date_limit IS NULL THEN NULL
         ELSE floor(extract(epoch from (ai.date_limit - $req_date::timestamptz)) * 1000)
