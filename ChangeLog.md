@@ -13,8 +13,9 @@
 
   * Add networkx Python library to centos7-python (Nathan Bowman).
 
-  * Add instructor info panel to student pages (Dave Mussulman).
   * Add ability to "Grade all saved answers" on exam assessment overview (Dave Mussulman).
+
+  * Add instructor info panel to student pages (Dave Mussulman).
 
   * Change "Save & Grade" button text and alignment (Dave Mussulman).
 
