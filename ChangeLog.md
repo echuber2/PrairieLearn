@@ -15,6 +15,10 @@
 
   * Add ability to "Grade all saved answers" on exam assessment overview (Dave Mussulman).
 
+  * Add dead letter reporting to Slack (Matt West).
+
+  * Add more logging for external grading jobs in production (Matt West).
+
   * Add instructor info panel to student pages (Dave Mussulman).
 
   * Change "Save & Grade" button text and alignment (Dave Mussulman).
@@ -38,6 +42,8 @@
   * Fix GitHub links to exampleCourse questions (Dave Mussulman).
 
   * Fix exclude file list for code coverage (Matt West).
+
+  * Fix `dump_filter.sh` to keep `authn_users` in all tables (Matt West).
 
   * Remove `allowIssueReporting` option in `infoCourseInstance.json` (Matt West).
 
