@@ -20,6 +20,7 @@
   * Add more logging for external grading jobs in production (Matt West).
 
   * Add instructor info panel to student pages (Dave Mussulman).
+  * Add documentation on common development errors to FAQ. (James Balamuta).
 
   * Change "Save & Grade" button text and alignment (Dave Mussulman).
 
