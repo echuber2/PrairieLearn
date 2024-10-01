@@ -81,6 +81,9 @@ router.post(
       await sqldb.queryAsync(sql.update_workspace_rebooted_at_now, {
         workspace_id,
       });
+      // delay the redirect here to help reproduce issue where the database
+      // doesn't update quickly enough and the nav errors out in middleware
+      await new Promise(resolve => setTimeout(resolve, 3000));
       res.redirect(`/pl/workspace/${workspace_id}`);
     } else if (req.body.__action === 'reset') {
       await workspaceUtils.updateWorkspaceState(

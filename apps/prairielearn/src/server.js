@@ -355,6 +355,8 @@ export async function initExpress() {
           "SELECT hostname FROM workspaces WHERE id = $workspace_id AND state = 'running';",
           { workspace_id },
         );
+        // defeat the fix to reproduce the original issue
+        break;
       }
 
       if (!result?.rows?.length) {
