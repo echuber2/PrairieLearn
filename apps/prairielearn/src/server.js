@@ -341,6 +341,9 @@ export async function initExpress() {
     logLevel: 'silent',
     logProvider: (_provider) => logger,
     router: async (req) => {
+      // repro an issue with FlashMessages in the navbar during some errors
+      throw new Error('flash bug');
+
       const match = req.url.match(/^\/pl\/workspace\/([0-9]+)\/container\//);
       if (!match) throw new Error(`Could not match URL: ${req.url}`);
 
